@@ -1,3 +1,49 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    margin-top: 0;
+    padding: 10px;
+}
+
+h1 {
+    font-family: Georgia;
+    color: #333333;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.half {
+    text-align: center;
+    width: 50%;
+    padding-top: 130px;
+}
+
+.text {
+    color: #333333;
+}
+
+.credit-card {
+    padding: 30px;
+}
+
+.credit-card-input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #333333;
+}
+
+.button {
+    margin: 30px;
+    height: 37px;
+    width: 196px;
+    border: 2px solid #333333;
+    border-radius: 4px;
+    color: #ffffff;
+    background-color: #333333;
+}
