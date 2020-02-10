@@ -9,6 +9,8 @@ body {
 
 h1 {
     font-family: Georgia;
+    font-size: 20px;
+    font-style: italic;
     color: #333333;
 }
 
@@ -22,6 +24,11 @@ h1 {
     text-align: center;
     width: 50%;
     padding-top: 130px;
+}
+
+.full {
+    text-align: center;
+    padding: 130px;
 }
 
 .text {
