@@ -1,5 +1,8 @@
-const creditCardInput = '4056789067542345';
-// const creditCardInput = "";
+/* Unit tests
+ const creditCardInput = '4056789067542345';
+const creditCardInput = '';
+const creditCardInput = 'ASER4'
+*/
 
 function validateUserInput(creditCardInput) {
     // validates user input is not empty and is a number
@@ -38,4 +41,25 @@ function reversingArray(arr) {
     return reversedArray;
 }
 
-reversingArray(newArray);
+const validationArray = reversingArray(newArray);
+
+function verifyLuhn(arr) {
+
+}
+
+for (let i = 0; i <= myArray.length - 1; i++) {
+    let newIndexValue = 0;
+    let temporarySum = [];
+    if (i % 2 === 0) {
+        validationArray.push(myArray[i]);
+    } else {
+        newIndexValue = myArray[i] * 2;
+        if (newIndexValue >= 10) {
+            temporarySum.push(newIndexValue)
+            const reducer = (accumulator, currentValue) => accumulator + currentValue;
+            validationArray.push(temporarySum.reduce(reducer));
+        } else {
+            validationArray.push(newIndexValue);
+        }
+    }
+}
