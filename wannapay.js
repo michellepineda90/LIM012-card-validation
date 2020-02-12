@@ -43,10 +43,9 @@ function reversingArray(arr) {
 
 const validationArray = reversingArray(newArray);
 
-function verifyLuhn(arr) {
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-}
-
+// esto debería ser una función o varias??
 for (let i = 0; i <= myArray.length - 1; i++) {
     let newIndexValue = 0;
     let temporarySum = [];
@@ -61,7 +60,6 @@ for (let i = 0; i <= myArray.length - 1; i++) {
             for (let i = 0, len = newIndexValue.length; i < len; i += 1) {
                 temporarySum.push(+newIndexValue.charAt(i));
             }
-            const reducer = (accumulator, currentValue) => accumulator + currentValue;
             resizedDigit = (temporarySum.reduce(reducer));
             validationArray.push(resizedDigit);
         } else {
@@ -70,4 +68,11 @@ for (let i = 0; i <= myArray.length - 1; i++) {
     }
 }
 
-// falta sumar todo ese array y validarlo según Luhn y ver si esa suma%10 === 0; tarjeta es válida
+function validatingLuhn() {
+    let finalValue = (myArray.reduce(reducer));
+    if (finalValue % 10 === 0) {
+        console.log('Su tarjeta es válida, estás siendo redirigido al sitio de pago')
+    } else {
+        console.log('Oh no! Tu tarjeta no ha sido reconocida. Quieres intentarlo de nuevo?')
+    }
+}
