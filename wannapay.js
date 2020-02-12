@@ -50,16 +50,24 @@ function verifyLuhn(arr) {
 for (let i = 0; i <= myArray.length - 1; i++) {
     let newIndexValue = 0;
     let temporarySum = [];
+    let resizedDigit = 0;
     if (i % 2 === 0) {
         validationArray.push(myArray[i]);
     } else {
         newIndexValue = myArray[i] * 2;
         if (newIndexValue >= 10) {
-            temporarySum.push(newIndexValue)
+            //descomponer un número en dígitos
+            newIndexValue = newIndexValue.toString();
+            for (let i = 0, len = newIndexValue.length; i < len; i += 1) {
+                temporarySum.push(+newIndexValue.charAt(i));
+            }
             const reducer = (accumulator, currentValue) => accumulator + currentValue;
-            validationArray.push(temporarySum.reduce(reducer));
+            resizedDigit = (temporarySum.reduce(reducer));
+            validationArray.push(resizedDigit);
         } else {
             validationArray.push(newIndexValue);
         }
     }
 }
+
+// falta sumar todo ese array y validarlo según Luhn y ver si esa suma%10 === 0; tarjeta es válida
