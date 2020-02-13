@@ -3,15 +3,17 @@
 }
 
 body {
-    margin-top: 0;
-    padding: 10px;
+    margin: 0;
 }
 
-h1 {
+.motto {
+    display: flex;
     font-family: Georgia;
     font-size: 20px;
     font-style: italic;
     color: #333333;
+    margin: 0;
+    vertical-align: middle;
 }
 
 .image-logo {
@@ -20,8 +22,8 @@ h1 {
     border-radius: 6px;
 }
 
-.main-header {
-    background-color: #f2c42e;
+.brand-name {
+    color: #333333;
 }
 
 .row {
@@ -38,6 +40,10 @@ h1 {
 
 .first {
     background-color: #f2c42e;
+}
+
+.header {
+    padding: 10px;
 }
 
 .full {
