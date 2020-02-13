@@ -1,11 +1,10 @@
 import validator from './validator.js';
 
-const creditCardInput = document.getElementById("credit-card-number");
-const button = document.getElementById("button");
-const goodValidationPage = document.getElementById("validated");
-const notValidatedPage = document.getElementById("not-validated");
-
-goodValidationPage.style.display = 'none';
-notValidatedPage.style.display = 'none';
+const creditCardNumber = document.getElementById('credit-card-number');
+const header = document.getElementById('header');
+const mainSection = document.getElementById('main-section');
+const button = document.getElementById('button');
+const goodValidationPage = document.getElementById('validated');
+const notValidatedPage = document.getElementById('not-validated');
 
 console.log(validator);

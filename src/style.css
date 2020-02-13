@@ -59,6 +59,8 @@ body {
 
 .text {
     color: #333333;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .credit-card {
@@ -73,6 +75,7 @@ body {
 
 .button {
     margin: 30px;
+    margin-bottom: 149px;
     height: 37px;
     width: 196px;
     border: 2px solid #333333;
@@ -84,4 +87,8 @@ body {
 .validation-image {
     height: 200px;
     width: 200px;
+}
+
+.full {
+    display: none;
 }
