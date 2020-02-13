@@ -12,14 +12,15 @@ body {
     font-size: 20px;
     font-style: italic;
     color: #333333;
-    margin: 0;
-    vertical-align: middle;
+    margin: auto;
 }
 
 .image-logo {
+    display: flex;
     width: 70px;
     height: 70px;
     border-radius: 6px;
+    margin: auto;
 }
 
 .brand-name {
@@ -43,7 +44,10 @@ body {
 }
 
 .header {
-    padding: 10px;
+    display: flex;
+    padding: 0;
+    margin: auto;
+    justify-content: center;
 }
 
 .full {
@@ -75,7 +79,7 @@ body {
     background-color: #333333;
 }
 
-.check-good {
+.validation-image {
     height: 200px;
     width: 200px;
 }
