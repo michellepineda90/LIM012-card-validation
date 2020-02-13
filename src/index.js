@@ -5,10 +5,7 @@ const button = document.getElementById("button");
 const goodValidationPage = document.getElementById("validated");
 const notValidatedPage = document.getElementById("not-validated");
 
-button.addEventListener('click', () => {
-    creditCardInput.innerText = maskify(creditCardInput);
-});
-
-
+goodValidationPage.style.display = 'none';
+notValidatedPage.style.display = 'none';
 
 console.log(validator);

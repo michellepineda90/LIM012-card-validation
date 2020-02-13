@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    background-color: #f2c42e;
 }
 
 .motto {
@@ -12,7 +13,7 @@ body {
     font-size: 20px;
     font-style: italic;
     color: #333333;
-    margin: auto;
+    margin-left: 10px;
 }
 
 .image-logo {
@@ -20,7 +21,7 @@ body {
     width: 70px;
     height: 70px;
     border-radius: 6px;
-    margin: auto;
+    margin: 0;
 }
 
 .brand-name {
@@ -39,8 +40,8 @@ body {
     padding-top: 130px;
 }
 
-.first {
-    background-color: #f2c42e;
+.second {
+    background-color: #ffffff;
 }
 
 .header {
@@ -53,6 +54,7 @@ body {
 .full {
     text-align: center;
     padding: 130px;
+    background-color: #ffffff;
 }
 
 .text {
