@@ -19,18 +19,17 @@ const captureInfo = () => {
     validationSection.style.display = 'block';
     header.style.display = 'none';
     mainSection.style.display = 'none';
+    if (validator.isvalid(creditCardNumber) === true) {
+        goodValidationImage.style.display = 'block';
+        notValidatedImage.style.display = 'none';
+        validationText.innerText = 'Tu tarjeta maskify es válida. Estás siendo redirigido al sitio de pago...';
+    } else {
+        goodValidationImage.style.display = 'none';
+        notValidatedImage.style.display = 'block';
+        validationText.innerText = 'Tu tarjeta maskify no ha sido reconocida. Por favor inténtalo de nuevo.';
+    }
 };
 
 button.addEventListener('click', captureInfo);
-
-// if (validator.isvalid(creditCardNumber) === true) {
-// goodValidationImage.style.display = 'block';
-// notValidatedImage.style.display = 'none';
-//     validation.innerText = 'Tu tarjeta maskify es válida. Estás siendo redirigido al sitio de pago...';
-// } else {
-// goodValidationImage.style.display = 'none';
-// notValidatedImage.style.display = 'block';
-//     validation.innerText = 'Tu tarjeta maskify no ha sido reconocida. Por favor inténtalo de nuevo.';
-// }
 
 console.log(validator);
