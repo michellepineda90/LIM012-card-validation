@@ -1,6 +1,7 @@
 import validator from './validator.js';
 
-const creditCardNumber = document.getElementById('credit-card-number');
+
+let creditCardNumber;
 const header = document.getElementById('header');
 const mainSection = document.getElementById('main-section');
 const button = document.getElementById('button');
@@ -11,10 +12,25 @@ const validationText = document.getElementById('validation-text');
 
 validationSection.style.display = 'none';
 
-// validator.isvalid(creditCardNumber);
-// validator.maskify(creditCardNumber);
+const captureInfo = () => {
+    creditCardNumber = document.getElementById('credit-card-number').value;
+    validator.isvalid(creditCardNumber);
+    // validator.maskify(creditCardNumber);
+    validationSection.style.display = 'block';
+    header.style.display = 'none';
+    mainSection.style.display = 'none';
+};
 
-// validation.innerText = 'prueba';
+button.addEventListener('click', captureInfo);
 
-console.log(creditCardNumber);
-// console.log(validator);
+// if (validator.isvalid(creditCardNumber) === true) {
+// goodValidationImage.style.display = 'block';
+// notValidatedImage.style.display = 'none';
+//     validation.innerText = 'yay';
+// } else {
+// goodValidationImage.style.display = 'none';
+// notValidatedImage.style.display = 'block';
+//     validation.innerText = 'nope';
+// }
+
+console.log(validator);

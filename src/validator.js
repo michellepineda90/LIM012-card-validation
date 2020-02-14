@@ -1,37 +1,36 @@
 const validator = {
-    // ...
 
     isvalid(creditCardNumber) {
 
-        function validateUserInput(creditCardNumber) {
+        const validateUserInput = (creditCardNumber) => {
             // validates user input is not empty and is a number
             if (creditCardNumber.length === 0) {
                 alert('Por favor ingrese los dígitos de su tarjeta')
             } else if (creditCardNumber.length > 0) {
                 const digitsRegEx = /^[0-9]*$/.test(creditCardNumber)
                 if (digitsRegEx === true) {
-                    turnStringToArray(creditCardNumber)
+                    turnStringToArray(creditCardNumber);
                 } else {
                     alert('Por favor ingrese sólo dígitos')
                 }
             }
         }
 
-        function turnStringToArray(creditCardNumber) {
+        const turnStringToArray = (creditCardNumber) => {
             // converts user input to an array of numbers
             let creditCardArray = []
             for (let i = 0; i < creditCardNumber.length; i++) {
                 const charToNumber = parseInt(creditCardNumber.charAt(i))
-                creditCardArray.push(charToNumber)
+                creditCardArray.push(charToNumber);
             }
             return creditCardArray;
         }
 
-        function reversingArray(arr) {
+        const reversingArray = (creditCardArray) => {
             // reverses the array
             const reversedArray = [];
-            for (let i = newArray.length - 1; i >= 0; i--) {
-                reversedArray.push(newArray[i]);
+            for (let i = creditCardArray.length - 1; i >= 0; i--) {
+                reversedArray.push(creditCardArray[i]);
             }
             return reversedArray;
         }
@@ -39,7 +38,7 @@ const validator = {
         const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
         // // esto debería ser una función o varias??
-        function preparingLuhn() {
+        const preparingLuhn = () => {
             let validationArray = [];
             for (let i = 0; i <= newReversedArray.length - 1; i++) {
                 let newIndexValue = 0;
@@ -65,21 +64,21 @@ const validator = {
             return validationArray;
         }
 
-        function validatingLuhn() {
+        const validatingLuhn = () => {
             let finalValue = (preparedArray.reduce(reducer));
             if (finalValue % 10 === 0) {
-                console.log('Su tarjeta es válida, estás siendo redirigido al sitio de pago')
+                return true;
             } else {
-                console.log('Oh no! Tu tarjeta no ha sido reconocida. Quieres intentarlo de nuevo?')
+                return false;
             }
         }
 
         validateUserInput(creditCardNumber);
-        const newArray = turnStringToArray(creditCardNumber);
-        const newReversedArray = reversingArray(newArray);
+        const creditCardArray = turnStringToArray(creditCardNumber);
+        const newReversedArray = reversingArray(creditCardArray);
         const preparedArray = preparingLuhn(newReversedArray);
-        validatingLuhn(preparedArray);
-
+        const resultado = validatingLuhn(preparedArray);
+        console.log(resultado);
     },
 
 
