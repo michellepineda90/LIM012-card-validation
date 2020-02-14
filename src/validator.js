@@ -1,12 +1,12 @@
 const validator = {
     // ...
 
-    validator.isvalid(creditCardNumber) {
+    isvalid(creditCardNumber) {
 
-    }
+    },
 
 
-    validator.maskify(creditCardNumber) {
+    maskify(creditCardNumber) {
         creditCardInput.replace(/.(?=.{4,}$)/g, '#');
     }
 

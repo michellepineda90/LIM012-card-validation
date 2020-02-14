@@ -1,28 +1,28 @@
 // User cases
 //  const creditCardInput = '4056789067542345';
-const creditCardInput = '4137894711755904';
+// const creditCardInput = '4137894711755904';
 // const creditCardInput = '';
 // const creditCardInput = 'ASER4'
 
-function validateUserInput(creditCardInput) {
+function validateUserInput(creditCardNumber) {
     // validates user input is not empty and is a number
-    if (creditCardInput.length === 0) {
+    if (creditCardNumber.length === 0) {
         console.log('Por favor ingrese los dígitos de su tarjeta')
-    } else if (creditCardInput.length > 0) {
-        const digitsRegEx = /^[0-9]*$/.test(creditCardInput)
+    } else if (creditCardNumber.length > 0) {
+        const digitsRegEx = /^[0-9]*$/.test(creditCardNumber)
         if (digitsRegEx === true) {
-            turnStringToArray(creditCardInput)
+            turnStringToArray(creditCardNumber)
         } else {
             console.log('Por favor ingrese sólo dígitos')
         }
     }
 }
 
-function turnStringToArray(creditCardInput) {
+function turnStringToArray(creditCardNumber) {
     // converts user input to an array of numbers
     let creditCardArray = []
-    for (let i = 0; i < creditCardInput.length; i++) {
-        const charToNumber = parseInt(creditCardInput.charAt(i))
+    for (let i = 0; i < creditCardNumber.length; i++) {
+        const charToNumber = parseInt(creditCardNumber.charAt(i))
         creditCardArray.push(charToNumber)
     }
     return creditCardArray;
