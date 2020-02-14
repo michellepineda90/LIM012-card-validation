@@ -10,7 +10,7 @@ body {
 .motto {
     display: flex;
     Font-Family: 'Roboto Condensed', Sans-Serif;
-    Font-Size: 35px;
+    Font-Size: 20px;
     font-style: italic;
     color: #333333;
     margin-left: 10px;
@@ -53,12 +53,6 @@ body {
     justify-content: center;
 }
 
-.full {
-    text-align: center;
-    padding: 130px;
-    background-color: #ffffff;
-}
-
 .text {
     color: #333333;
     padding-left: 30px;
@@ -68,7 +62,7 @@ body {
 }
 
 .credit-card {
-    padding: 30px;
+    padding: 29.5px;
 }
 
 .credit-card-input {
@@ -88,14 +82,17 @@ body {
     background-color: #333333;
 }
 
-.validation-image {
-    height: 200px;
-    width: 200px;
+.validation-page {
+    background-color: #ffffff;
+    padding: 260px;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
-
-/* esto mejor poner una clase hide, y con el DOM irla modificando con events */
-
-.full {
-    display: none;
+.validation-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
 }

@@ -44,14 +44,10 @@
 
     </main>
 
-    <section id="validated" class="full">
-        <img class="validation-image" src="check-good.jpg" alt="check">
-        <p class="text">¡Yay! Tu tarjeta ha sido verificada. Haz click en el botón para continuar comprando.</p>
-    </section>
-
-    <section id="not-validated" class="full">
-        <img class="validation-image" src="ex-bad.jpg" alt="ex">
-        <p class="text">¡Oh no! El sistema no ha reconocido tu tarjeta. Haz click en el botón para intentarlo de nuevo.</p>
+    <section id="validation" class="validation-page">
+        <img id="validation-image-good" class="validation-image" src="check-good.jpg" alt="check">
+        <img id="validation-image-bad" class="validation-image" src="ex-bad.jpg" alt="ex">
+        <p id="validation-text" class="text validation"></p>
     </section>
 
     <script src="index.js" type="module"></script>

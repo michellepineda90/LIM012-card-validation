@@ -1,9 +1,3 @@
-// User cases
-//  const creditCardInput = '4056789067542345';
-// const creditCardInput = '4137894711755904';
-// const creditCardInput = '';
-// const creditCardInput = 'ASER4'
-
 function validateUserInput(creditCardNumber) {
     // validates user input is not empty and is a number
     if (creditCardNumber.length === 0) {

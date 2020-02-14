@@ -4,7 +4,17 @@ const creditCardNumber = document.getElementById('credit-card-number');
 const header = document.getElementById('header');
 const mainSection = document.getElementById('main-section');
 const button = document.getElementById('button');
-const goodValidationPage = document.getElementById('validated');
-const notValidatedPage = document.getElementById('not-validated');
+const validationSection = document.getElementById('validation');
+const goodValidationImage = document.getElementById('validation-image-good');
+const notValidatedImage = document.getElementById('validation-image-bad');
+const validationText = document.getElementById('validation-text');
 
-console.log(validator);
+validationSection.style.display = 'none';
+
+// validator.isvalid(creditCardNumber);
+// validator.maskify(creditCardNumber);
+
+// validation.innerText = 'prueba';
+
+console.log(creditCardNumber);
+// console.log(validator);
