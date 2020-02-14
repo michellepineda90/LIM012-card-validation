@@ -26,11 +26,11 @@ button.addEventListener('click', captureInfo);
 // if (validator.isvalid(creditCardNumber) === true) {
 // goodValidationImage.style.display = 'block';
 // notValidatedImage.style.display = 'none';
-//     validation.innerText = 'yay';
+//     validation.innerText = 'Tu tarjeta maskify es válida. Estás siendo redirigido al sitio de pago...';
 // } else {
 // goodValidationImage.style.display = 'none';
 // notValidatedImage.style.display = 'block';
-//     validation.innerText = 'nope';
+//     validation.innerText = 'Tu tarjeta maskify no ha sido reconocida. Por favor inténtalo de nuevo.';
 // }
 
 console.log(validator);
