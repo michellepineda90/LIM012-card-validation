@@ -6,8 +6,8 @@ const header = document.getElementById('header');
 const mainSection = document.getElementById('main-section');
 const button = document.getElementById('button');
 const validationSection = document.getElementById('validation');
-const goodValidationImage = document.getElementById('validation-image-good');
-const notValidatedImage = document.getElementById('validation-image-bad');
+const goodValidationImage = document.getElementById('image-good');
+const notValidatedImage = document.getElementById('image-bad');
 const validationText = document.getElementById('validation-text');
 
 validationSection.style.display = 'none';
