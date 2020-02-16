@@ -83,7 +83,7 @@ const validator = {
 
 
     maskify(creditCardNumber) {
-        creditCardNumber.replace(/.(?=.{4,}$)/g, '#');
+        return creditCardNumber.replace(/.(?=.{4,}$)/g, '#');
     }
 
 };
