@@ -1,7 +1,7 @@
 import validator from './validator.js';
 
 
-let creditCardNumber = document.getElementById('credit-card-number').value;
+let creditCardNumber = document.getElementById('credit-card-number');
 const header = document.getElementById('header');
 const mainSection = document.getElementById('main-section');
 const button = document.getElementById('button');
@@ -17,14 +17,14 @@ const captureInfo = () => {
     validationSection.style.display = 'block';
     header.style.display = 'none';
     mainSection.style.display = 'none';
-    if (validator.isvalid(creditCardNumber)) {
+    if (validator.isvalid(creditCardNumber.value)) {
         goodValidationImage.style.display = 'block';
         notValidatedImage.style.display = 'none';
-        validationText.innerText = `Tu tarjeta ${maskedNumber} es válida. Estás siendo redirigido al sitio de pago...`;
+        validationText.innerText = `Tu tarjeta ${String(maskedNumber)} es válida. Estás siendo redirigido al sitio de pago...`;
     } else {
         goodValidationImage.style.display = 'none';
         notValidatedImage.style.display = 'block';
-        validationText.innerText = `Tu tarjeta ${maskedNumber} no ha sido reconocida. Por favor inténtalo de nuevo.`;
+        validationText.innerText = `Tu tarjeta ${String(maskedNumber)} no ha sido reconocida. Por favor inténtalo de nuevo.`;
     }
 };
 
