@@ -1,6 +1,6 @@
 import validator from './validator.js';
 
-const creditCardNumber = document.getElementById('credit-card-number').value;
+const creditCardNumber = document.getElementById('credit-card-number');
 const header = document.getElementById('header');
 const mainSection = document.getElementById('main-section');
 const button = document.getElementById('button');
@@ -9,38 +9,39 @@ const goodValidationImage = document.getElementById('image-good');
 const notValidatedImage = document.getElementById('image-bad');
 const validationText = document.getElementById('validation-text');
 const loadingGif = document.getElementById('loading-gif');
-const maskedNumber = validator.maskify(creditCardNumber); //esto está bien declarado? accesado?
+const reloadButton = document.getElementById('reload-button');
 
-validationSection.style.display = 'none';
-
-const captureInfo = () => {
+const captureInfo = (event) => {
+    event.preventDefault();
     // validates user input is not empty and is a number, if so, run validator
-    // removed if creditCardNumber.length == undefined because it's already required on HTML
-    if (creditCardNumber.length > 0) {
-        const digitsRegEx = /^[0-9]*$/.test(creditCardNumber)
+    if (creditCardNumber.value.length > 0) {
+        const digitsRegEx = /^[0-9]*$/.test(creditCardNumber.value)
         if (digitsRegEx) {
-            validator.isValid(creditCardNumber); //si lo llamo en la línea 29 es necesario llamarlo aquí?
-            validationSection.style.display = 'block';
+            validationSection.classList.remove('hide');
             header.style.display = 'none';
             mainSection.style.display = 'none';
+            validator.isValid(creditCardNumber.value);
+            if (validator.isvalid(creditCardNumber.value)) {
+                goodValidationImage.style.display = 'block;'
+                notValidatedImage.style.display = 'none';
+                validationText.innerText = `Tu tarjeta ${String(validator.maskify(creditCardNumber.value))} es válida. Estás siendo redirigido al sitio de pago...`;
+                loadingGif.style.display = 'block';
+            } else {
+                goodValidationImage.style.display = 'none';
+                notValidatedImage.style.display = 'block';
+                validationText.innerText = `Tu tarjeta ${String(validator.maskify(creditCardNumber.value))} no ha sido reconocida. ¿Quieres intentarlo de nuevo?`;
+            }
         } else {
             alert('Por favor ingrese sólo dígitos');
         }
     }
+};
 
-    if (validator.isvalid(creditCardNumber)) {
-        goodValidationImage.style.display = 'block;'
-        notValidatedImage.style.display = 'none';
-        validationText.innerText = `Tu tarjeta ${String(maskedNumber)} es válida. Estás siendo redirigido al sitio de pago...`;
-        loadingGif.style.display = 'block';
-    } else {
-        goodValidationImage.style.display = 'none';
-        notValidatedImage.style.display = 'block';
-        validationText.innerText = `Tu tarjeta ${String(maskedNumber)} no ha sido reconocida. ¿Quieres intentarlo de nuevo?`;
-        // add button to reset to validationSection.style.display = 'none'
-    }
+const reload = () => {
+    validationSection.style.display = 'none';
 };
 
 button.addEventListener('click', captureInfo);
+reloadButton.addEventListener('click', reload);
 
 console.log(validator);

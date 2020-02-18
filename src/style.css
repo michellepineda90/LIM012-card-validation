@@ -7,6 +7,10 @@ body {
     background-color: #f2c42e;
 }
 
+.hide {
+    display: none;
+}
+
 .motto {
     display: flex;
     Font-Family: 'Roboto Condensed', Sans-Serif;
