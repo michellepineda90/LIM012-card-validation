@@ -2,20 +2,6 @@ const validator = {
 
     isvalid(creditCardNumber) {
 
-        const validateUserInput = (creditCardNumber) => {
-            // validates user input is not empty and is a number
-            if (creditCardNumber.length === 0) {
-                alert('Por favor ingrese los dígitos de su tarjeta')
-            } else if (creditCardNumber.length > 0) {
-                const digitsRegEx = /^[0-9]*$/.test(creditCardNumber)
-                if (digitsRegEx === true) {
-                    turnStringToArray(creditCardNumber);
-                } else {
-                    alert('Por favor ingrese sólo dígitos')
-                }
-            }
-        }
-
         const turnStringToArray = (creditCardNumber) => {
             // converts user input to an array of numbers
             let creditCardArray = []
