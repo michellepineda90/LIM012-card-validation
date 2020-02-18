@@ -39,10 +39,6 @@ body {
     display: flex;
 }
 
-.hide {
-    display: none;
-}
-
 .half {
     text-align: center;
     width: 50%;
@@ -107,4 +103,8 @@ body {
 .loading-gif {
     height: 50px;
     width: 50px;
+}
+
+.hide {
+    display: none;
 }
