@@ -29,7 +29,7 @@ const captureInfo = (event) => {
                 validationText.innerText = `Tu tarjeta ${String(validator.maskify(creditCardNumber.value))} es válida. Estás siendo redirigido al sitio de pago...`;
             } else {
                 notValidatedImage.classList.remove('hide');
-                reloadButtonclassList.remove('hide');
+                reloadButton.classList.remove('hide');
                 validationText.innerText = `Tu tarjeta ${String(validator.maskify(creditCardNumber.value))} no ha sido reconocida. ¿Quieres intentarlo de nuevo?`;
             }
         } else {

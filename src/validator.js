@@ -17,9 +17,9 @@ const reversingArray = (creditCardArray) => {
     return reversedArray;
 }
 
-const reducer = (accumulator, currentValue) => accumulator + currentValue;
+const reducer = (accumulator, currentValue) => { return accumulator + currentValue };
 
-const preparingLuhn = () => {
+const preparingLuhn = (newReversedArray) => {
     let validationArray = [];
     for (let i = 0; i <= newReversedArray.length - 1; i++) {
         let newIndexValue = 0;
@@ -45,8 +45,8 @@ const preparingLuhn = () => {
     return validationArray;
 }
 
-const validatingLuhn = () => {
-    let finalValue = (preparedArray.reduce(reducer));
+const validatingLuhn = (validationArray) => {
+    let finalValue = (validationArray.reduce(reducer));
     if (finalValue % 10 === 0) {
         return true;
     } else {
@@ -58,8 +58,8 @@ const validator = {
     isValid: (creditCardNumber) => {
         const creditCardArray = turnStringToArray(creditCardNumber);
         const newReversedArray = reversingArray(creditCardArray);
-        const preparedArray = preparingLuhn(newReversedArray);
-        const resultado = validatingLuhn(preparedArray);
+        const validationArray = preparingLuhn(newReversedArray);
+        const resultado = validatingLuhn(validationArray);
         console.log(resultado)
         return resultado;
     },
