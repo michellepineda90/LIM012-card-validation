@@ -75,8 +75,8 @@ body {
 }
 
 .button {
-    margin: 30px;
-    margin-bottom: 149px;
+    margin: 50px;
+    margin-bottom: 129px;
     height: 37px;
     width: 196px;
     border: 2px solid #333333;
@@ -87,8 +87,8 @@ body {
 
 .validation-page {
     background-color: #ffffff;
-    padding: 260px;
-    padding-bottom: 10px;
+    padding: 139px;
+    padding-bottom: 19px;
     text-align: center;
 }
 
@@ -103,6 +103,11 @@ body {
 .loading-gif {
     height: 50px;
     width: 50px;
+}
+
+.validation-text {
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 
 .hide {
