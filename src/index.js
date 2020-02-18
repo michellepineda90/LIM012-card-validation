@@ -1,6 +1,5 @@
 import validator from './validator.js';
 
-
 const creditCardNumber = document.getElementById('credit-card-number').value;
 const header = document.getElementById('header');
 const mainSection = document.getElementById('main-section');
@@ -13,27 +12,31 @@ const maskedNumber = validator.maskify(creditCardNumber); //esto está bien decl
 
 validationSection.style.display = 'none';
 
-
 const captureInfo = () => {
-    //validates user input is not empty and is a number, if so, run validator
-    if (creditCardNumber.length === 0) {
-        alert('Por favor ingrese los dígitos de su tarjeta')
-    } else if (creditCardNumber.length > 0) {
+    // validates user input is not empty and is a number, if so, run validator
+    // removed if creditCardNumber.length == undefined because it's already required on HTML
+    if (creditCardNumber.length > 0) {
         const digitsRegEx = /^[0-9]*$/.test(creditCardNumber)
         if (digitsRegEx) {
-            validator.isValid(creditCardNumber);
-            validationSection.style.display = 'block' && header.style.display = 'none' && mainSection.style.display = 'none';
+            validator.isValid(creditCardNumber); //si lo llamo en la línea 29 es necesario llamarlo aquí?
+            validationSection.style.display = 'block';
+            header.style.display = 'none';
+            mainSection.style.display = 'none';
         } else {
-            alert('Por favor ingrese sólo dígitos')
+            alert('Por favor ingrese sólo dígitos');
         }
     }
 
     if (validator.isvalid(creditCardNumber)) {
-        goodValidationImage.style.display = 'block' && notValidatedImage.style.display = 'none';
+        goodValidationImage.style.display = 'block;'
+        notValidatedImage.style.display = 'none';
         validationText.innerText = `Tu tarjeta ${String(maskedNumber)} es válida. Estás siendo redirigido al sitio de pago...`;
+        // add loading gif
     } else {
-        goodValidationImage.style.display = 'none' && notValidatedImage.style.display = 'block';
-        validationText.innerText = `Tu tarjeta ${String(maskedNumber)} no ha sido reconocida. Por favor inténtalo de nuevo.`;
+        goodValidationImage.style.display = 'none';
+        notValidatedImage.style.display = 'block';
+        validationText.innerText = `Tu tarjeta ${String(maskedNumber)} no ha sido reconocida. ¿Quieres intentarlo de nuevo?`;
+        // add button to reset to validationSection.style.display = 'none'
     }
 };
 
