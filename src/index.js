@@ -40,6 +40,9 @@ const captureInfo = (event) => {
 
 const reload = () => {
     validationSection.classList.add('hide');
+    header.classList.remove('hide');
+    mainSection.classList.remove('hide');
+
 };
 
 button.addEventListener('click', captureInfo);

@@ -7,10 +7,6 @@ body {
     background-color: #f2c42e;
 }
 
-.hide {
-    display: none;
-}
-
 .motto {
     display: flex;
     Font-Family: 'Roboto Condensed', Sans-Serif;
@@ -35,9 +31,16 @@ body {
 }
 
 .row {
-    display: flex;
     width: 100%;
     align-items: stretch;
+}
+
+.visible {
+    display: flex;
+}
+
+.hide {
+    display: none;
 }
 
 .half {

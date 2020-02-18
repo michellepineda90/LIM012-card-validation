@@ -1,5 +1,4 @@
 const turnStringToArray = (creditCardNumber) => {
-    // converts user input to an array of numbers
     let creditCardArray = []
     for (let i = 0; i < creditCardNumber.length; i++) {
         const charToNumber = parseInt(creditCardNumber.charAt(i))
@@ -9,7 +8,6 @@ const turnStringToArray = (creditCardNumber) => {
 }
 
 const reversingArray = (creditCardArray) => {
-    // reverses the array
     const reversedArray = [];
     for (let i = creditCardArray.length - 1; i >= 0; i--) {
         reversedArray.push(creditCardArray[i]);
@@ -30,7 +28,6 @@ const preparingLuhn = (newReversedArray) => {
         } else {
             newIndexValue = newReversedArray[i] * 2;
             if (newIndexValue >= 10) {
-                //descomponer un número en dígitos
                 newIndexValue = newIndexValue.toString();
                 for (let i = 0, len = newIndexValue.length; i < len; i += 1) {
                     temporarySum.push(+newIndexValue.charAt(i));
