@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Wannapay: Validación de tarjetas de crédito</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -13,7 +13,7 @@
     <section id="header" class="row">
 
         <section class="half first header">
-            <img class="image-logo" src="wannapay-logo.jpg" alt="Wannapay Logo">
+            <img class="image-logo" src="wannapay-logo.jpg" alt="Wannapay Logo" />
             <h1 class="motto"> Valida tu tarjeta de crédito. Rápido. Fácil. Seguro.</h1>
         </section>
 
@@ -36,8 +36,8 @@
             <p class="text">Ingresa los dígitos de tu tarjeta de crédito</p>
 
             <form class="credit-card">
-                <input id="credit-card-number" class="credit-card-input" type="text" name="credit-card-number" required><br>
-                <input id="button" class="button" type="submit" value="VERIFICAR">
+                <input id="credit-card-number" class="credit-card-input" type="text" name="credit-card-number" required/><br/>
+                <button id="button" class="button" type="submit" value="VERIFICAR"></button>
             </form>
 
         </section>
@@ -45,8 +45,10 @@
     </main>
 
     <section id="validation" class="validation-page">
-        <img id="image-good" class="validation-image" src="check-good.jpg" alt="check">
-        <img id="loading-gif" class="loading-gif" src="Spin-1s-200px.gif" alt="loading gif" <img id="image-bad" class="validation-image" src="ex-bad.jpg" alt="ex">
+        <img id="image-good" class="validation-image" src="check-good.jpg" alt="check" />
+        <img id="loading-gif" class="loading-gif" src="Spin-1s-200px.gif" alt="loading gif" />
+        <img id="image-bad" class="validation-image" src="ex-bad.jpg" alt="ex" />
+        <button type="button">Intentar de nuevo</button>
         <p id="validation-text" class="text validation"></p>
     </section>
 
