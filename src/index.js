@@ -8,6 +8,7 @@ const validationSection = document.getElementById('validation');
 const goodValidationImage = document.getElementById('image-good');
 const notValidatedImage = document.getElementById('image-bad');
 const validationText = document.getElementById('validation-text');
+const loadingGif = document.getElementById('loading-gif');
 const maskedNumber = validator.maskify(creditCardNumber); //esto está bien declarado? accesado?
 
 validationSection.style.display = 'none';
@@ -31,7 +32,7 @@ const captureInfo = () => {
         goodValidationImage.style.display = 'block;'
         notValidatedImage.style.display = 'none';
         validationText.innerText = `Tu tarjeta ${String(maskedNumber)} es válida. Estás siendo redirigido al sitio de pago...`;
-        // add loading gif
+        loadingGif.style.display = 'block';
     } else {
         goodValidationImage.style.display = 'none';
         notValidatedImage.style.display = 'block';
