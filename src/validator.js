@@ -19,7 +19,6 @@ const reversingArray = (creditCardArray) => {
 
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-// // esto debería ser una función o varias??
 const preparingLuhn = () => {
     let validationArray = [];
     for (let i = 0; i <= newReversedArray.length - 1; i++) {
@@ -56,11 +55,12 @@ const validatingLuhn = () => {
 }
 
 const validator = {
-    isvalid: (creditCardNumber) => {
+    isValid: (creditCardNumber) => {
         const creditCardArray = turnStringToArray(creditCardNumber);
         const newReversedArray = reversingArray(creditCardArray);
         const preparedArray = preparingLuhn(newReversedArray);
         const resultado = validatingLuhn(preparedArray);
+        console.log(resultado)
         return resultado;
     },
     maskify: (creditCardNumber) => {

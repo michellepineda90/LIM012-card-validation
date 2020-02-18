@@ -23,14 +23,13 @@ const captureInfo = (event) => {
             header.classList.add('hide');
             mainSection.classList.add('hide');
             validator.isValid(creditCardNumber.value);
-            if (validator.isvalid(creditCardNumber.value)) {
-                goodValidationImage.style.display = 'block;'
-                notValidatedImage.style.display = 'none';
+            if (validator.isValid(creditCardNumber.value)) {
+                goodValidationImage.classList.remove('hide');
+                loadingGif.classList.remove('hide');
                 validationText.innerText = `Tu tarjeta ${String(validator.maskify(creditCardNumber.value))} es válida. Estás siendo redirigido al sitio de pago...`;
-                loadingGif.style.display = 'block';
             } else {
-                goodValidationImage.style.display = 'none';
-                notValidatedImage.style.display = 'block';
+                notValidatedImage.classList.remove('hide');
+                reloadButtonclassList.remove('hide');
                 validationText.innerText = `Tu tarjeta ${String(validator.maskify(creditCardNumber.value))} no ha sido reconocida. ¿Quieres intentarlo de nuevo?`;
             }
         } else {
@@ -40,7 +39,7 @@ const captureInfo = (event) => {
 };
 
 const reload = () => {
-    validationSection.style.display = 'none';
+    validationSection.classList.add('hide');
 };
 
 button.addEventListener('click', captureInfo);
