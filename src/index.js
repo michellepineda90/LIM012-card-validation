@@ -14,12 +14,14 @@ const reloadButton = document.getElementById('reload-button');
 const captureInfo = (event) => {
     event.preventDefault();
     // validates user input is not empty and is a number, if so, run validator
-    if (creditCardNumber.value.length > 0) {
+    if (!creditCardNumber.value.length) {
+        alert('Este campo no puede quedar vacío')
+    } else if (creditCardNumber.value.length > 0) {
         const digitsRegEx = /^[0-9]*$/.test(creditCardNumber.value)
         if (digitsRegEx) {
             validationSection.classList.remove('hide');
-            header.style.display = 'none';
-            mainSection.style.display = 'none';
+            header.classList.add('hide');
+            mainSection.classList.add('hide');
             validator.isValid(creditCardNumber.value);
             if (validator.isvalid(creditCardNumber.value)) {
                 goodValidationImage.style.display = 'block;'
@@ -32,7 +34,7 @@ const captureInfo = (event) => {
                 validationText.innerText = `Tu tarjeta ${String(validator.maskify(creditCardNumber.value))} no ha sido reconocida. ¿Quieres intentarlo de nuevo?`;
             }
         } else {
-            alert('Por favor ingrese sólo dígitos');
+            alert('Por favor ingresa sólo dígitos');
         }
     }
 };
