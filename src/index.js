@@ -15,13 +15,13 @@ const captureInfo = (event) => {
     event.preventDefault();
     // validates user input is not empty and is a number, if so, run validator
     if (!creditCardNumber.value.length) {
-        alert('Este campo no puede quedar vacío')
+        alert('Este campo no puede quedar vacío');
     } else if (creditCardNumber.value.length > 0) {
-        const digitsRegEx = /^[0-9]*$/.test(creditCardNumber.value)
+        const digitsRegEx = /^[0-9]*$/.test(creditCardNumber.value);
         if (digitsRegEx) {
-            validationSection.classList.remove('hide');
             header.classList.add('hide');
             mainSection.classList.add('hide');
+            validationSection.classList.remove('hide');
             validator.isValid(creditCardNumber.value);
             if (validator.isValid(creditCardNumber.value)) {
                 goodValidationImage.classList.remove('hide');

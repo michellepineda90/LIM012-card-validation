@@ -60,7 +60,6 @@ const validator = {
         const newReversedArray = reversingArray(creditCardArray);
         const validationArray = preparingLuhn(newReversedArray);
         const resultado = validatingLuhn(validationArray);
-        console.log(resultado)
         return resultado;
     },
     maskify: (creditCardNumber) => {
