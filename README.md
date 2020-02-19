@@ -31,8 +31,12 @@ Imagen del prototipo final:
 
 1. Homepage:
 
-![homepage](final-prototype-homepage.jpg)
+![homepage final prototype](final-prototype-homepage.jpg)
 
 2. Página de validación:
 
-![homepage](valid-section-final-prototype.jpg)
+![validation final prototype](valid-section-final-prototype.jpg)
+
+Y cómo me siento al terminar este proyecto:
+
+![spinning hedgehog on bathtub](spinning-hedgehog.gif)
