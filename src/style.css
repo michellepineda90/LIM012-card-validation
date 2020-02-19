@@ -45,7 +45,8 @@ body {
 .half {
     text-align: center;
     width: 50%;
-    padding-top: 130px;
+    padding-top: 40px;
+    padding-bottom: 55px;
 }
 
 .second {
@@ -55,7 +56,6 @@ body {
 .header {
     display: flex;
     padding-top: 40px;
-    /* margin: auto; */
     justify-content: center;
 }
 
