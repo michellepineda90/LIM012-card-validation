@@ -4,7 +4,6 @@
 
 body {
     margin: 0;
-    background-color: #f2c42e;
 }
 
 .motto {
@@ -35,6 +34,10 @@ body {
     align-items: stretch;
 }
 
+.first {
+    background-color: #f2c42e;
+}
+
 .visible {
     display: flex;
 }
@@ -51,8 +54,8 @@ body {
 
 .header {
     display: flex;
-    padding: 0;
-    margin: auto;
+    padding-top: 40px;
+    /* margin: auto; */
     justify-content: center;
 }
 

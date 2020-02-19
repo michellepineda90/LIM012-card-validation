@@ -46,6 +46,7 @@ const reload = () => {
     validationSection.classList.add('hide');
     header.classList.remove('hide');
     mainSection.classList.remove('hide');
+    creditCardNumber.setAttribute("autocomplete", "off");
 
 };
 
