@@ -1,5 +1,5 @@
 const turnStringToArray = (creditCardNumber) => {
-    let creditCardArray = []
+    let creditCardArray = [];
     for (let i = 0; i < creditCardNumber.length; i++) {
         const charToNumber = parseInt(creditCardNumber.charAt(i))
         creditCardArray.push(charToNumber);

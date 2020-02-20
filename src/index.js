@@ -13,7 +13,6 @@ const reloadButton = document.getElementById('reload-button');
 
 const captureInfo = (event) => {
     event.preventDefault();
-    // validates user input is not empty and is a number, if so, run validator
     if (!creditCardNumber.value.length) {
         alert('Este campo no puede quedar vacío');
     } else if (creditCardNumber.value.length > 0) {
@@ -53,4 +52,4 @@ const reload = () => {
 button.addEventListener('click', captureInfo);
 reloadButton.addEventListener('click', reload);
 
-console.log(validator);
+// console.log(validator);
