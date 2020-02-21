@@ -40,3 +40,5 @@ Imagen del prototipo final:
 Y cómo me siento al terminar este proyecto:
 
 ![spinning hedgehog on bathtub](spinning-hedgehog.gif)
+
+[![BCH compliance](https://bettercodehub.com/edge/badge/weirdkidwithwindows/LIM012-card-validation?branch=master)](https://bettercodehub.com/)
