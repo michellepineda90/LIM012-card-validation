@@ -22,12 +22,17 @@ const preparingLuhn = (newReversedArray) => {
     for (let i = 0; i <= newReversedArray.length - 1; i++) {
         let newIndexValue = 0;
         let resizedDigit = 0;
+        let temporarySum = [];
         if (i % 2 === 0) {
             validationArray.push(newReversedArray[i]);
         } else {
             newIndexValue = newReversedArray[i] * 2;
             if (newIndexValue >= 10) {
-                resizedDigit = newIndexValue % 9;
+                newIndexValue = newIndexValue.toString();
+                for (let i = 0, len = newIndexValue.length; i < len; i += 1) {
+                    temporarySum.push(+newIndexValue.charAt(i));
+                }
+                resizedDigit = (temporarySum.reduce(reducer));
                 validationArray.push(resizedDigit);
             } else {
                 validationArray.push(newIndexValue);
