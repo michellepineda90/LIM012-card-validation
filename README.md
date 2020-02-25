@@ -40,31 +40,31 @@ Imagen del prototipo final:
 ## Objetivos de aprendizaje:
 
 ### UX
- Crear prototipos para obtener feedback e iterar
- Aplicar los principios de diseño visual
+Crear prototipos para obtener feedback e iterar
+Aplicar los principios de diseño visual
 
 ### HTML y CSS
- Uso correcto de HTML semántico
- Uso de selectores de CSS
- Construir tu aplicación respetando el diseño realizado (maquetación).
+Uso correcto de HTML semántico
+Uso de selectores de CSS
+Construir tu aplicación respetando el diseño realizado (maquetación).
 
 ### Javascript
- Manipulación de strings
- Uso de condicionales
- Uso de bucles
- Utilizar ES Modules (import | export).
+Manipulación de strings
+Uso de condicionales
+Uso de bucles
+Utilizar ES Modules (import | export).
 
 ### Testing
- Testeo de tus funciones
+Testeo de tus funciones
 
 ### Git y GitHub
- Comandos de git (add | commit | pull | status | push).
- Manejo de repositorios de GitHub (clone | fork | gh-pages).
+Comandos de git (add | commit | pull | status | push).
+Manejo de repositorios de GitHub (clone | fork | gh-pages).
 
 ### Buenas prácticas de desarrollo
- Organizar y dividir el código en módulos (Modularización).
- Uso de identificadores descriptivos (Nomenclatura | Semántica).
- Uso de linter para seguir buenas prácticas (ESLINT).
+Organizar y dividir el código en módulos (Modularización).
+Uso de identificadores descriptivos (Nomenclatura | Semántica).
+Uso de linter para seguir buenas prácticas (ESLINT).
 
 Y cómo me siento al terminar este proyecto:
 
