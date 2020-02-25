@@ -46,10 +46,7 @@ const reload = () => {
     header.classList.remove('hide');
     mainSection.classList.remove('hide');
     creditCardNumber.setAttribute("autocomplete", "off");
-
 };
 
 button.addEventListener('click', captureInfo);
 reloadButton.addEventListener('click', reload);
-
-// console.log(validator);
