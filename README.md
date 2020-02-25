@@ -37,34 +37,50 @@ Imagen del prototipo final:
 
 ![validation final prototype](valid-section-final-prototype.jpg)
 
-## Objetivos de aprendizaje:
+## Objetivos de aprendizaje (~~cumplidos~~):
 
 ### UX
-Crear prototipos para obtener feedback e iterar
-Aplicar los principios de diseño visual
+
+* [ ] [Diseñar la aplicación pensando y entendiendo al usuario]
+* [ ] ~~[Crear prototipos para obtener feedback e iterar]~~
+* [ ] ~~[Aplicar los principios de diseño visual]~~
 
 ### HTML y CSS
-Uso correcto de HTML semántico
-Uso de selectores de CSS
-Construir tu aplicación respetando el diseño realizado (maquetación).
+
+* [ ] ~~[Uso correcto de HTML semántico]~~
+* [ ] ~~[Uso de selectores de CSS]~~
+* [ ] ~~[Construir tu aplicación respetando el diseño realizado]~~
+
+### DOM
+
+* [ ] [Uso de selectores de nodos del DOM](https://lms.laboratoria.la/cohorts/lim-2020-01-bc-core-lim012/courses/browser/02-dom/03-1-dom-methods-selection)
+* [ ] [Manejo de eventos del DOM](https://lms.laboratoria.la/cohorts/lim-2020-01-bc-core-lim012/courses/browser/02-dom/04-events)
+* [ ] [Manipulación dinámica del DOM](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
 
 ### Javascript
-Manipulación de strings
-Uso de condicionales
-Uso de bucles
-Utilizar ES Modules (import | export).
+
+* [ ] [Manipulación de strings](https://lms.laboratoria.la/cohorts/lim-2020-01-bc-core-lim012/courses/javascript/06-strings/01-strings)
+* [ ] [Uso de condicionales](https://lms.laboratoria.la/cohorts/lim-2020-01-bc-core-lim012/courses/javascript/02-flow-control/01-conditionals-and-loops)
+* [ ] [Uso de bucles](https://lms.laboratoria.la/cohorts/lim-2020-01-bc-core-lim012/courses/javascript/02-flow-control/02-loops)
+* [ ] [Uso de funciones](https://lms.laboratoria.la/cohorts/lim-2019-09-bc-core-lim011/courses/javascript/02-flow-control/03-functions)
+* [ ] [Datos atómicos y estructurados](https://www.todojs.com/tipos-datos-javascript-es6/)
+* [ ] Utilizar ES Modules (`import` | `export`).
 
 ### Testing
-Testeo de tus funciones
+
+* [ ] [Testeo de tus funciones](https://jestjs.io/docs/es-ES/getting-started)
 
 ### Git y GitHub
-Comandos de git (add | commit | pull | status | push).
-Manejo de repositorios de GitHub (clone | fork | gh-pages).
+
+* [ ] [Comandos de git](https://lms.laboratoria.la/cohorts/lim-2019-09-bc-core-lim011/courses/scm/01-git/04-commands)
+  (`add` | `commit` | `pull` | `status` | `push`).
+* [ ] [Manejo de repositorios de GitHub](https://lms.laboratoria.la/cohorts/lim-2019-09-bc-core-lim011/courses/scm/02-github/01-github)  (`clone` | `fork` | `gh-pages`).
 
 ### Buenas prácticas de desarrollo
-Organizar y dividir el código en módulos (Modularización).
-Uso de identificadores descriptivos (Nomenclatura | Semántica).
-Uso de linter para seguir buenas prácticas (ESLINT).
+
+* [ ] Organizar y dividir el código en módulos (Modularización).
+* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica).
+* [ ] Uso de linter para seguir buenas prácticas (ESLINT).
 
 Y cómo me siento al terminar este proyecto:
 
