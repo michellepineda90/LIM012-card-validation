@@ -1,18 +1,18 @@
-const turnStringToArray = (creditCardNumber) => {
-    let creditCardArray = [];
-    for (let i = 0; i < creditCardNumber.length; i++) {
-        const charToNumber = parseInt(creditCardNumber.charAt(i))
-        creditCardArray.push(charToNumber);
+const turnStringToArray = (string) => {
+    let newArr = [];
+    for (let i = 0; i < string.length; i++) {
+        const element = parseInt(string.charAt(i))
+        newArr.push(element);
     }
-    return creditCardArray;
+    return newArr;
 }
 
-const reversingArray = (creditCardArray) => {
-    const reversedArray = [];
-    for (let i = creditCardArray.length - 1; i >= 0; i--) {
-        reversedArray.push(creditCardArray[i]);
+const reversingArray = (array) => {
+    const newArr = [];
+    for (let i = array.length - 1; i >= 0; i--) {
+        newArr.push(array[i]);
     }
-    return reversedArray;
+    return newArr;
 }
 
 const reducer = (accumulator, currentValue) => { return accumulator + currentValue };
@@ -52,11 +52,9 @@ const validatingLuhn = (validationArray) => {
 }
 
 const validator = {
-    isValid: (creditCardNumber) => {
-        const creditCardArray = turnStringToArray(creditCardNumber);
-        const newReversedArray = reversingArray(creditCardArray);
-        const validationArray = preparingLuhn(newReversedArray);
-        const resultado = validatingLuhn(validationArray);
+    isValid: (string) => {
+        const arr = reversingArray(turnStringToArray(string));
+
         return resultado;
     },
     maskify: (creditCardNumber) => {

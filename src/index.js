@@ -11,7 +11,7 @@ const validationText = document.getElementById('validation-text');
 const loadingGif = document.getElementById('loading-gif');
 const reloadButton = document.getElementById('reload-button');
 
-const captureInfo = (event) => {
+const captureInfo = () => {
     event.preventDefault();
     if (!creditCardNumber.value.length) {
         alert('Este campo no puede quedar vacío');
