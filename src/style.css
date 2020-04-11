@@ -2,11 +2,22 @@
     box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 body {
     font-family: 'Cabin', Sans-Serif;
     color: #333333;
     margin: 0;
     padding: 0;
+}
+
+img {
+    width: 100%;
+	max-width: 60px; 
 }
 
 /* home page */
@@ -20,7 +31,7 @@ body {
 header {
     display: flex;
     flex-flow: row wrap;
-    padding: 10% 5%;
+    padding-top: 10%;
     justify-content: center;
 }
 
@@ -29,16 +40,12 @@ header {
     font-size: 1.25em;
     font-style: italic;
     margin-left: 2.55%;
-    margin-top: 3%;
-}
-
-img {
-    width: 100%;
-	max-width: 60px; 
 }
 
 .image-logo {
     border-radius: 6px;
+    height: 60px;
+    /* tuve que usar height porque sino se desconfigura, but why?  */
 }
 
 [class*="c1"] {
