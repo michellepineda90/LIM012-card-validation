@@ -1,48 +1,39 @@
-const turnStringToArray = (string) => {
-    let newArr = [];
-    for (let i = 0; i < string.length; i++) {
-        const element = parseInt(string.charAt(i))
-        newArr.push(element);
-    }
-    return newArr;
-}
+const turnStringToArrayOfDigits = (string) => {
+    const stringToNumber = Number(string);
+    const arrayOfDigits = Array.from(String(stringToNumber), Number);
+    return arrayOfDigits;
+};
 
-const reversingArray = (array) => {
-    const newArr = [];
-    for (let i = array.length - 1; i >= 0; i--) {
-        newArr.push(array[i]);
-    }
-    return newArr;
-}
+const reversedArray = turnStringToArrayOfDigits(string).reverse();
 
-const reducer = (accumulator, currentValue) => { return accumulator + currentValue };
+const reducer = (a, b) => { a + b };
 
-const preparingLuhn = (newReversedArray) => {
-    let validationArray = [];
-    for (let i = 0; i <= newReversedArray.length - 1; i++) {
+const prepareArrayForValidation = (reversedArray) => {
+    let finalArray = [];
+    for (let i = 0; i <= reversedArray.length - 1; i++) {
         let newIndexValue = 0;
         let resizedDigit = 0;
         let temporarySum = [];
         if (i % 2 === 0) {
-            validationArray.push(newReversedArray[i]);
+            finalArray.push(reversedArray[i]);
         } else {
-            newIndexValue = newReversedArray[i] * 2;
+            newIndexValue = reversedArray[i] * 2;
             if (newIndexValue >= 10) {
                 newIndexValue = newIndexValue.toString();
                 for (let i = 0, len = newIndexValue.length; i < len; i += 1) {
                     temporarySum.push(+newIndexValue.charAt(i));
                 }
                 resizedDigit = (temporarySum.reduce(reducer));
-                validationArray.push(resizedDigit);
+                finalArray.push(resizedDigit);
             } else {
-                validationArray.push(newIndexValue);
+                finalArray.push(newIndexValue);
             }
         }
     }
-    return validationArray;
+    return finalArray;
 }
 
-const validatingLuhn = (validationArray) => {
+const validateCreditCard = (validationArray) => {
     let finalValue = (validationArray.reduce(reducer));
     if (finalValue % 10 === 0) {
         return true;
@@ -53,13 +44,14 @@ const validatingLuhn = (validationArray) => {
 
 const validator = {
     isValid: (string) => {
-        const arr = reversingArray(turnStringToArray(string));
-
-        return resultado;
+        const arr = reversedArray(turnStringToArrayOfDigits(string));
+        const result = validateCreditCard(prepareArrayForValidation(arr));
+        return result;
     },
+
     maskify: (creditCardNumber) => {
         return creditCardNumber.replace(/.(?=.{4,}$)/g, '#');
-    }
+    },
 };
 
 export default validator;

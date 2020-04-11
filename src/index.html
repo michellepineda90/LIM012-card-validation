@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -24,17 +24,19 @@
             <p class="text description">Wannapay comprueba la validez de tu tarjeta de crédito 
                 para darte acceso a miles de sitios de compras.
             </p>
-
         </section>
 
         <section class="r1c2">
-
             <form class="credit-card" autocomplete="off">
-                <p class="text message">Ingresa los dígitos de tu tarjeta de crédito</p>
-                <input id="credit-card-number" class="credit-card-input" type="text" name="credit-card-number" /><br/>
-                <button id="button" class="button" type="submit">VERIFICAR</button>
+                <p>
+                    <label for="credit-card-number" class="text message">Ingresa los dígitos de tu tarjeta de crédito
+                        <abbr title="required" aria-label="required"></abbr>
+                    </label>
+                </p>
+                    <input type="tel" id="credit-card-number" class="credit-card-input" name="user_creditcard_number" min="1"/>
+            </br>
+                <button id="form-button" class="button" type="button">VERIFICAR</button>
             </form>
-
         </section>
 
     </div>
