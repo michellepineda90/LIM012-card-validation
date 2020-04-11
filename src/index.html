@@ -11,34 +11,35 @@
 
 <body>
 
-    <main class="main-container">
+    <!-- home page -->
 
-        <section class="r1c1 header">
+    <div class="wrapper">
+
+        <header class="c1">
             <img class="image-logo" src="wannapay-logo.jpg" alt="Wannapay Logo" />
-            <h1 class="motto"> Valida tu tarjeta de crédito. Rápido. Fácil. Seguro.</h1>
-        </section>
+            <h1 class="motto"> Wannapay: Valida tu tarjeta de crédito. Rápido. Fácil. Seguro.</h1>
+        </header>
 
         <section class="r2c1">
-            <h2 class="brand-name">Wannapay</h2>
-            <p class="text">Wannapay es una empresa de verificación de tarjetas de crédito. 
-                Ingresa los dígitos de tu tarjeta, valídala e obten acceso a miles de 
-                sitios de compras en todo el mundo.
+            <p class="text description">Wannapay comprueba la validez de tu tarjeta de crédito 
+                para darte acceso a miles de sitios de compras.
             </p>
 
         </section>
 
         <section class="r1c2">
 
-            <p class="text">Ingresa los dígitos de tu tarjeta de crédito</p>
-
             <form class="credit-card" autocomplete="off">
+                <p class="text message">Ingresa los dígitos de tu tarjeta de crédito</p>
                 <input id="credit-card-number" class="credit-card-input" type="text" name="credit-card-number" /><br/>
                 <button id="button" class="button" type="submit">VERIFICAR</button>
             </form>
 
         </section>
 
-    </main>
+    </div>
+
+    <!-- validation pages -->
 
     <section id="validation" class="validation-page hide">
         <img id="image-good" class="validation-image hide" src="check-good.jpg" alt="check" />
