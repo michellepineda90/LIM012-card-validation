@@ -13,9 +13,9 @@
 
     <!-- home page -->
 
-    <div class="wrapper">
+    <div id="main-section" class="wrapper">
 
-        <header class="c1">
+        <header id="header" class="c1">
             <img class="image-logo" src="wannapay-logo.jpg" alt="Wannapay Logo" />
             <h1 class="motto"> Wannapay: Valida tu tarjeta de crédito rápido, fácil y seguro.</h1>
         </header>
@@ -27,15 +27,15 @@
         </section>
 
         <section class="r1c2">
-            <form class="credit-card" autocomplete="off">
+            <form id="credit-card-form" class="credit-card" autocomplete="off">
                 <p>
-                    <label for="credit-card-number" class="text message">Ingresa los dígitos de tu tarjeta de crédito
-                        <abbr title="required" aria-label="required"></abbr>
+                    <label for="credit-card-number" class="text message">
+                        Ingresa los dígitos de tu tarjeta de crédito
                     </label>
                 </p>
-                    <input type="tel" id="credit-card-number" class="credit-card-input" name="user_creditcard_number" min="1"/>
+                    <input type="tel" id="credit-card-number" class="credit-card-input" name="user_creditcard_number" autofocus="true"/>
             </br>
-                <button id="form-button" class="button" type="button">VERIFICAR</button>
+                <button id="form-button" class="button" type="submit">VERIFICAR</button>
             </form>
         </section>
 

@@ -1,9 +1,9 @@
 import validator from './validator.js';
+import formValidator from './form-validation.js';
 
 const creditCardNumber = document.getElementById('credit-card-number');
-const header = document.getElementById('header');
+const form = document.getElementById('credit-card-form');
 const mainSection = document.getElementById('main-section');
-const button = document.getElementById('form-button');
 const validationSection = document.getElementById('validation');
 const goodValidationImage = document.getElementById('image-good');
 const notValidatedImage = document.getElementById('image-bad');
@@ -13,35 +13,35 @@ const reloadButton = document.getElementById('reload-button');
 
 const captureInfo = (event) => {
     event.preventDefault();
-    if (!creditCardNumber.value.length) {
-        alert('Este campo no puede quedar vacío');
-        // ver si lo resuelve el min del html
-    }
-    header.classList.add('hide');
-    mainSection.classList.add('hide');
-    validationSection.classList.remove('hide');
-    validator.isValid(creditCardNumber.value);
-    if (validator.isValid(creditCardNumber.value)) {
-        goodValidationImage.classList.remove('hide');
-        loadingGif.classList.remove('hide');
-        notValidatedImage.classList.add('hide');
-        reloadButton.classList.add('hide');
-        validationText.innerText = `Tu tarjeta ${String(validator.maskify(creditCardNumber.value))} es válida. Estás siendo redirigido al sitio de pago...`;
+    if (formValidator.isValid(creditCardNumber.value)) {
+        mainSection.classList.add('hide');
+        validationSection.classList.remove('hide');
+        validator.isValid(creditCardNumber.value);
+        if (validator.isValid(creditCardNumber.value)) {
+            goodValidationImage.classList.remove('hide');
+            loadingGif.classList.remove('hide');
+            notValidatedImage.classList.add('hide');
+            reloadButton.classList.add('hide');
+            validationText.innerText = `Tu tarjeta ${String(validator.maskify(creditCardNumber.value))} es válida. Estás siendo redirigido al sitio de pago...`;
+        } else {
+            notValidatedImage.classList.remove('hide');
+            reloadButton.classList.remove('hide');
+            goodValidationImage.classList.add('hide');
+            loadingGif.classList.add('hide');
+            validationText.innerText = `Tu tarjeta ${String(validator.maskify(creditCardNumber.value))} no ha sido reconocida. ¿Quieres intentarlo de nuevo?`;
+        }
     } else {
-        notValidatedImage.classList.remove('hide');
-        reloadButton.classList.remove('hide');
-        goodValidationImage.classList.add('hide');
-        loadingGif.classList.add('hide');
-        validationText.innerText = `Tu tarjeta ${String(validator.maskify(creditCardNumber.value))} no ha sido reconocida. ¿Quieres intentarlo de nuevo?`;
+        creditCardNumber.setCustomValidity('Por favor ingresa los dígitos de tu tarjeta');
     }
 };
 
 const reload = () => {
     validationSection.classList.add('hide');
-    header.classList.remove('hide');
     mainSection.classList.remove('hide');
     creditCardNumber.setAttribute("autocomplete", "off");
 };
 
-button.addEventListener('change', captureInfo);
+form.addEventListener('submit', captureInfo);
 reloadButton.addEventListener('click', reload);
+
+    
